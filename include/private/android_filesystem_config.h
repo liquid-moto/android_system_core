@@ -200,6 +200,8 @@ static struct fs_path_config android_dirs[] = {
     { 00755, AID_ROOT,   AID_SHELL,  "system/vendor" },
     { 00755, AID_ROOT,   AID_SHELL,  "system/xbin" },
     { 00755, AID_ROOT,   AID_ROOT,   "system/etc/ppp" },
+    { 00755, AID_ROOT,   AID_ROOT,   "system/etc/bootmenu" },
+    { 00755, AID_ROOT,   AID_ROOT,   "system/lib/modules" },
     { 00777, AID_ROOT,   AID_ROOT,   "sdcard" },
     { 00755, AID_ROOT,   AID_ROOT,   0 },
 };
@@ -248,8 +250,10 @@ static struct fs_path_config android_files[] = {
 		 * in user builds. */
     { 06750, AID_ROOT,      AID_SHELL,     "system/bin/run-as" },
     { 06750, AID_ROOT,      AID_SYSTEM,    "system/bin/rebootcmd" },
+    { 06755, AID_ROOT,      AID_ROOT,      "system/bin/hijack" },
     { 00755, AID_ROOT,      AID_SHELL,     "system/bin/*" },
     { 00755, AID_ROOT,      AID_ROOT,      "system/lib/valgrind/*" },
+    { 00644, AID_ROOT,      AID_ROOT,      "system/lib/modules/*" },
     { 00755, AID_ROOT,      AID_SHELL,     "system/xbin/*" },
     { 00755, AID_ROOT,      AID_SHELL,     "system/vendor/bin/*" },
     { 00750, AID_ROOT,      AID_SHELL,     "sbin/*" },
